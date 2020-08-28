@@ -9,4 +9,4 @@ Cardiac arrest is the most common cause of death in the United States and a majo
       
    * <b>EEG data summarized by hour</b>: Electroencephalography (EEG) is a rich source of data that offers insight into brain structure and function.EEG can be described by expert interpretation or quantitative (qEEG) methods. Both approaches can predict post-arrest outcomes.Unlike expert interpretation, qEEG is objective and can be automated, making it broadly accessible. This data Contains EEG brain wave signals for about 2500 patients for a period of 48 hours post resuscitation. The model only uses 10 hours of data which proved to be sufficient to obtain the most out of the qEEG signals.
       * Three methods were used to impute the time series EEG data. One hot deck, Random one hot deck (radomized to choose data 3 hours around the point of interest), a quadratic spline
-    *
+    * <b> EEG second by second data </b>: 
