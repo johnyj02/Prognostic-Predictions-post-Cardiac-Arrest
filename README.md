@@ -5,7 +5,9 @@ Cardiac arrest is the most common cause of death in the United States and a majo
 ## 2. Data sources| Imputations |Feature generation:
   * <b>Patient Time invariant data</b> - This contains the time invariant attributes for about 3000 patients. The are about 255 attributes that are recored at a patient level. 
       * Since some of the variable are a consequence of death, Expert opinion was used to filter such variables and others that were obviously not related to the problem at hand
+      * The outcome variable was a combination of two features <I>survive</I> and <I>follow_commands</I>
       * Variable imputation were done using rule based imputation based on certain business rules and a combination of KNN and Random forest imputer. Details of all the above data preperation for this data source can be found here
+      
       
    * <b>EEG data summarized by hour</b>: Electroencephalography (EEG) is a rich source of data that offers insight into brain structure and function.EEG can be described by expert interpretation or quantitative (qEEG) methods. Both approaches can predict post-arrest outcomes.Unlike expert interpretation, qEEG is objective and can be automated, making it broadly accessible. This data Contains EEG brain wave signals for about 2500 patients for a period of 48 hours post resuscitation. The model only uses 10 hours of data which proved to be sufficient to obtain the most out of the qEEG signals.
       * Three methods were used to impute the time series EEG data. One hot deck, Random one hot deck (radomized to choose data 3 hours around the point of interest), a quadratic spline
@@ -13,5 +15,6 @@ Cardiac arrest is the most common cause of death in the United States and a majo
    * <b> Medications data</b>: This data set captures all medications that is admisitered to the patients post resuscitation. The data is recorded at periodic intervals i.e. a record is generated with a start and stop time for every medication administered.
    * <b> Temperature and blood pressure data</b>: This data continously captures the temperature and blood pressure of the patients post resuscitation. THe data is then aggregated at hourly intervals. We use the first 10 hours of the data in our analysis 
    * <b> Expert interpretaion data</b>: The dataset comprises of EEG interpretations (Background and superimposed) from experts categorized into 3 -Flat activity, continous background activity and burst-suppression (alternating periods of flat with periods of activity). This data set was built in an effort to capture the anomalous patterns in the EEG second by second data. The data contains interpretation from multiple experts at various time periods, hence we can see that a single patient can have more than one EEG interpretation.
-   
-   
+ 
+## 3. Model Building:
+There were many challenges that needed to be addressed during the model building stage. In particular the subset of patients across random states in the test set was not in many cases a representative of the universe of patients and the absolute necessity of maintaining a low false positive rate
