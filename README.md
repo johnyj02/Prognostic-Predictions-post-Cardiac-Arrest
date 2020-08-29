@@ -18,4 +18,5 @@ Cardiac arrest is the most common cause of death in the United States and a majo
  
 ## 3. Model Building:
  There were many challenges that needed to be addressed during the model building stage. In particular the subset of patients across random states in the test set was not in many cases a representative of the universe of patients and the absolute necessity of maintaining a low false positive rate => 100% specificity. Maintaining 100% specificity ensured that  patients classified as irrecoverable had little to no chance of recovery thus making WLST-N acceptable.
- Of the many models that were tried Xgboost proved to be the most promissing of them all with a 73% sensitivity while still maintaining ~100% specificity (99.7%). We also employed Neural Networks - a CNN-LSTM architecture (EEGnet) was used to boost sensitivity but it proved extremely difficult to tune it to maintain 100% specificity within the period of my internship.
+
+    Of the many models that were tried Xgboost proved to be the most promissing of them all with a 73% sensitivity while still maintaining ~100% specificity (99.7%). We also employed Neural Networks - a CNN-LSTM architecture (EEGnet) was used to boost sensitivity but it proved extremely difficult to tune it to maintain 100% specificity within the period of my internship.
