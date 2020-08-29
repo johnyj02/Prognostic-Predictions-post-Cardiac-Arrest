@@ -23,5 +23,4 @@ Cardiac arrest is the most common cause of death in the United States and a majo
   * quadriple fold stratification while creating train test splits and cross validation splits. The data was stratified on age buckets, cardiac arrest type, rhythm,suppression ratio buckets. This ensured that the distribution of the the universe of patients were maintained both test and cv splits.
   * Another method used to avoid the above mentioned issue was to create a randomized mode selected model. In this we ran the entire hyper parameter tuning through 100 different random state splits of train and test and choose the model that was selected the maximum number of times. This gave some statistical significance that the selected hyper parameters were the closest to explaining the underlying distribution of data.
   The results of this excercise are currently under review by the doctors at UPMC and written manuscripts are underway for publication purposes.
-  
-  For this to work we first had to test if the tree based models learned over all folds were the same. It intutively makes sense of them to be the same too, since at each fold we are training the data on all but one data point. Thus the predictions on the resulting  
+
